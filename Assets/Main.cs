@@ -5,12 +5,14 @@ using UnityEngine;
 public class Main : MonoBehaviour {
 
     GameObject obj;
-	void Start () {
+    GameObject obj2;
+    void Start () {
         obj = GameObject.Find("Cube");
-	}
-	
-	void Update () {
-        obj.transform.Rotate(Vector3.up*Time.deltaTime*10f );
-	
-	}
+        obj2 = GameObject.Find("Cube2");
+    }
+
+    void Update () {
+        obj.transform.Rotate(Vector3.up*Time.deltaTime*20f );
+        obj2.transform.Rotate(Vector3.right * Time.deltaTime * 20f);
+    }
 }
